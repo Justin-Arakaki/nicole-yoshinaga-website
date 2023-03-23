@@ -11,7 +11,7 @@ export function usePageUpdate() {
 	return useContext(UpdateContext);
 }
 
-export function PageProvider({ children }) {
+export function PageProvider({ children: React. }) {
 	const [page, setPage] = useState(0);
 
 	return (
