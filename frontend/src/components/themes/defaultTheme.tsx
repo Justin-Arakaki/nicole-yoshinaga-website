@@ -67,7 +67,7 @@ const defaultTheme = createTheme({
 		},
 	},
 });
-const bpDown = defaultTheme.breakpoints.down('md');
+const bpDown = defaultTheme.breakpoints.down('lg');
 
 // Responsive Fonts
 defaultTheme.typography.button[bpDown] = {

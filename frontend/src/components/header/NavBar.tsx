@@ -1,14 +1,11 @@
-import { useState } from 'react';
-import Box from '@mui/material/Box';
 import CustyTabs from './CustyTabs';
 import CustyTab from './CustyTab';
 
-export default function NavBar() {
-	const [value, setValue] = useState(0);
-	const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-		setValue(newValue);
-	};
+interface Props {
+	onChange?: any;
+}
 
+export default function NavBar({ onChange }: Props) {
 	return (
 		<CustyTabs
 			value={value}
