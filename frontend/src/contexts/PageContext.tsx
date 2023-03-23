@@ -1,11 +1,24 @@
-import { createContext } from 'react';
+import { createContext, useContext, useState } from 'react';
 
-type PageContextInterface = {
-	page?: number;
-	setPage(value: number): void;
-};
-const PageContext = createContext<PageContextInterface>({});
+const Context = createContext<number>(0);
+const UpdateContext = createContext<Function>();
 
-export const PageProvider = PageContext.Provider;
+export function usePage() {
+	return useContext(Context);
+}
 
-export default PageContext;
+export function usePageUpdate() {
+	return useContext(UpdateContext);
+}
+
+export function PageProvider({ children }) {
+	const [page, setPage] = useState(0);
+
+	return (
+		<Context.Provider value={page}>
+			<UpdateContext.Provider value={setPage}>
+				{children}
+			</UpdateContext.Provider>
+		</Context.Provider>
+	);
+}
