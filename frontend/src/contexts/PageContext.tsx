@@ -1,7 +1,8 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 
-const Context = createContext<number>(0);
-const UpdateContext = createContext<Function>();
+const [page, setPage] = useState(0);
+const Context = createContext(page);
+const UpdateContext = createContext(setPage);
 
 export function usePage() {
 	return useContext(Context);
@@ -11,9 +12,7 @@ export function usePageUpdate() {
 	return useContext(UpdateContext);
 }
 
-export function PageProvider({ children: React. }) {
-	const [page, setPage] = useState(0);
-
+export function PageProvider(children: ReactNode) {
 	return (
 		<Context.Provider value={page}>
 			<UpdateContext.Provider value={setPage}>
