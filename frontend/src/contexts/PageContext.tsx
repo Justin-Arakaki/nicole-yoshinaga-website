@@ -8,21 +8,25 @@ import {
 	SyntheticEvent,
 } from 'react';
 
-type CreateContext = Dispatch<SetStateAction<number>>;
+type CreateContext = (
+	event: SyntheticEvent<Element, Event>,
+	newValue: number
+) => void;
 
 const PageContext = createContext<number | null>(null);
 const PageUpdateContext = createContext<CreateContext | null>(null);
 
 export function usePage(): number {
 	const context = useContext(PageContext);
-	if (!context) throw new Error('PageContext is null');
+	const defaultVal = 0;
+	if (!context) return defaultVal;
 	return context;
 }
 
 // Only any works here for some reason
 export function usePageUpdate(): any {
 	const context = useContext(PageUpdateContext);
-	if (!context) throw new Error('PageContext is null');
+	if (!context) throw new Error('PageUpdateContext is null');
 	return context;
 }
 
@@ -33,9 +37,13 @@ interface Children {
 export function PageProvider({ children }: Children) {
 	const [page, setPage] = useState(0);
 
+	function handleChange(event: React.SyntheticEvent, newValue: number) {
+		setPage(newValue);
+	}
+
 	return (
 		<PageContext.Provider value={page}>
-			<PageUpdateContext.Provider value={setPage}>
+			<PageUpdateContext.Provider value={handleChange}>
 				{children}
 			</PageUpdateContext.Provider>
 		</PageContext.Provider>
