@@ -1,23 +1,43 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import {
+	createContext,
+	useContext,
+	useState,
+	ReactNode,
+	Dispatch,
+	SetStateAction,
+	SyntheticEvent,
+} from 'react';
 
-const [page, setPage] = useState(0);
-const Context = createContext(page);
-const UpdateContext = createContext(setPage);
+type CreateContext = Dispatch<SetStateAction<number>>;
 
-export function usePage() {
-	return useContext(Context);
+const PageContext = createContext<number | null>(null);
+const PageUpdateContext = createContext<CreateContext | null>(null);
+
+export function usePage(): number {
+	const context = useContext(PageContext);
+	if (!context) throw new Error('PageContext is null');
+	return context;
 }
 
-export function usePageUpdate() {
-	return useContext(UpdateContext);
+// Only any works here for some reason
+export function usePageUpdate(): any {
+	const context = useContext(PageUpdateContext);
+	if (!context) throw new Error('PageContext is null');
+	return context;
 }
 
-export function PageProvider(children: ReactNode) {
+interface Children {
+	children: ReactNode;
+}
+
+export function PageProvider({ children }: Children) {
+	const [page, setPage] = useState(0);
+
 	return (
-		<Context.Provider value={page}>
-			<UpdateContext.Provider value={setPage}>
+		<PageContext.Provider value={page}>
+			<PageUpdateContext.Provider value={setPage}>
 				{children}
-			</UpdateContext.Provider>
-		</Context.Provider>
+			</PageUpdateContext.Provider>
+		</PageContext.Provider>
 	);
 }

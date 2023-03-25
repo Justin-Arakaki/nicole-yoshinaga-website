@@ -4,17 +4,13 @@ import Toolbar from '@mui/material/Toolbar';
 import ElevationScroll from './ElevationScroll';
 import NavBar from './NavBar';
 
-interface Props {
-	onChange?: any;
-}
-
-export default function Header({ onChange }: Props) {
+export default function Header() {
 	return (
 		<ElevationScroll>
 			<AppBar position="fixed" color="primary">
 				<Toolbar sx={{ justifyContent: 'space-between' }}>
 					<Typography variant="h1">NICOLE YOSHINAGA</Typography>
-					<NavBar onChange={onChange} />
+					<NavBar />
 				</Toolbar>
 			</AppBar>
 		</ElevationScroll>

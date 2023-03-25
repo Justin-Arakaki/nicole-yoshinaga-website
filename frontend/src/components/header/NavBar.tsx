@@ -1,15 +1,15 @@
 import CustyTabs from './CustyTabs';
 import CustyTab from './CustyTab';
+import { usePage, usePageUpdate } from '../../contexts/PageContext';
 
-interface Props {
-	onChange?: any;
-}
+export default function NavBar() {
+	const page = usePage();
+	const togglePage = usePageUpdate();
 
-export default function NavBar({ onChange }: Props) {
 	return (
 		<CustyTabs
-			value={value}
-			onChange={handleChange}
+			value={page}
+			onChange={togglePage}
 			aria-label="styled tabs example"
 		>
 			<CustyTab label="animation" />
