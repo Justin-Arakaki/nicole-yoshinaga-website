@@ -1,38 +1,16 @@
+import { createContext, useState } from 'react';
 import {
-	createContext,
-	useContext,
-	useState,
-	ReactNode,
-	Dispatch,
-	SetStateAction,
-	SyntheticEvent,
-} from 'react';
-
-type CreateContext = (
-	event: SyntheticEvent<Element, Event>,
-	newValue: number
-) => void;
+	createUseContext,
+	createUseContextUpdate,
+	HandleContext,
+	Children,
+} from '../utils/contextConstructor';
 
 const PageContext = createContext<number | null>(null);
-const PageUpdateContext = createContext<CreateContext | null>(null);
+const PageUpdateContext = createContext<HandleContext | null>(null);
 
-export function usePage(): number {
-	const context = useContext(PageContext);
-	const defaultVal = 0;
-	if (!context) return defaultVal;
-	return context;
-}
-
-// Only any works here for some reason
-export function usePageUpdate(): any {
-	const context = useContext(PageUpdateContext);
-	if (!context) throw new Error('PageUpdateContext is null');
-	return context;
-}
-
-interface Children {
-	children: ReactNode;
-}
+export const usePage = createUseContext(PageContext, 0);
+export const usePageUpdate = createUseContextUpdate(PageUpdateContext);
 
 export function PageProvider({ children }: Children) {
 	const [page, setPage] = useState(0);
