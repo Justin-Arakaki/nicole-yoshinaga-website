@@ -1,10 +1,12 @@
 import { createTheme } from '@mui/material/styles';
+import { Typography } from '@mui/material/styles/createTypography';
+import { Theme } from '@mui/material/styles';
 
 const defaultTheme = createTheme({
 	breakpoints: {
 		values: {
 			xs: 0,
-			sm: 500,
+			sm: 650,
 			md: 900,
 			lg: 1200,
 			xl: 1536,
@@ -67,28 +69,51 @@ const defaultTheme = createTheme({
 		},
 	},
 });
-const bpDown = defaultTheme.breakpoints.down('lg');
+const lgDown = defaultTheme.breakpoints.down('lg');
+const smDown = defaultTheme.breakpoints.down('sm');
 
 // Responsive Fonts
-defaultTheme.typography.button[bpDown] = {
+defaultTheme.typography.button[lgDown] = {
 	fontSize: '1.2rem',
 };
-defaultTheme.typography.h1[bpDown] = {
+defaultTheme.typography.h1[lgDown] = {
 	fontSize: '2rem',
 };
-defaultTheme.typography.h2[bpDown] = {
+defaultTheme.typography.h2[lgDown] = {
 	fontSize: '2rem',
 };
-defaultTheme.typography.h3[bpDown] = {
+defaultTheme.typography.h3[lgDown] = {
 	fontSize: '2rem',
 };
-defaultTheme.typography.h4[bpDown] = {
+defaultTheme.typography.h4[lgDown] = {
 	fontSize: '1.25rem',
 };
-defaultTheme.typography.body1[bpDown] = {
+defaultTheme.typography.body1[lgDown] = {
 	fontSize: '1.25rem',
 };
-defaultTheme.typography.body2[bpDown] = {
+defaultTheme.typography.body2[lgDown] = {
+	fontSize: '1rem',
+};
+
+defaultTheme.typography.button[smDown] = {
+	fontSize: '1rem',
+};
+defaultTheme.typography.h1[smDown] = {
+	fontSize: '1.8rem',
+};
+defaultTheme.typography.h2[smDown] = {
+	fontSize: '1.8rem',
+};
+defaultTheme.typography.h3[smDown] = {
+	fontSize: '1.8rem',
+};
+defaultTheme.typography.h4[smDown] = {
+	fontSize: '1.1rem',
+};
+defaultTheme.typography.body1[smDown] = {
+	fontSize: '1.1rem',
+};
+defaultTheme.typography.body2[smDown] = {
 	fontSize: '1rem',
 };
 
