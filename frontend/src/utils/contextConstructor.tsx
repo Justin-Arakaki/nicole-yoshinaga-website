@@ -1,9 +1,12 @@
-import { useContext, ReactNode, Context, SyntheticEvent } from 'react';
+import {
+	useContext,
+	ReactNode,
+	Context,
+	Dispatch,
+	SetStateAction,
+} from 'react';
 
-export type HandleContext = (
-	event: SyntheticEvent<Element, Event>,
-	newValue: number
-) => void;
+export type SetValue<T> = Dispatch<SetStateAction<T>>;
 
 export interface Children {
 	children: ReactNode;
