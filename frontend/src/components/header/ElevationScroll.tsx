@@ -10,7 +10,7 @@ export default function ElevationScroll(props: MUIProps) {
 		target: window ? window() : undefined,
 	});
 
-	return cloneElement(children, {
+	return cloneElement(children!, {
 		elevation: trigger ? 4 : 0,
 	});
 }
