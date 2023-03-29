@@ -6,4 +6,3 @@ export default function changeRem(
 	const editedVal = edit(noRem);
 	return editedVal + 'rem';
 }
-// test
