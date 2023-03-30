@@ -1,12 +1,16 @@
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/icons-material/Menu';
 
-export default function Hamburger() {
+interface Props {
+	onClick: () => void;
+}
+
+export default function Hamburger({ onClick }: Props) {
 	return (
 		<IconButton
 			color="inherit"
 			aria-label="open drawer"
-			onClick={() => console.log('click')}
+			onClick={onClick}
 			edge="start"
 		>
 			<Menu />
