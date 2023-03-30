@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import ElevationScroll from './ElevationScroll';
 import NavBar from './NavBar';
 import CustyDrawer from './Drawer';
+import Box from '@mui/material/Box';
 
 export default function Header() {
 	const windowWidth = useWindow();
@@ -16,13 +17,16 @@ export default function Header() {
 	}
 
 	return (
-		<ElevationScroll>
-			<AppBar position="fixed" color="primary">
-				<Toolbar sx={{ justifyContent: 'space-between' }}>
-					<Typography variant="h1">NICOLE YOSHINAGA</Typography>
-					{navigationType}
-				</Toolbar>
-			</AppBar>
-		</ElevationScroll>
+		<>
+			<ElevationScroll>
+				<AppBar position="fixed" color="primary">
+					<Toolbar sx={{ justifyContent: 'space-between' }}>
+						<Typography variant="h1">NICOLE YOSHINAGA</Typography>
+						{navigationType}
+					</Toolbar>
+				</AppBar>
+			</ElevationScroll>
+			<Box sx={{ marginTop: '4rem' }}></Box>
+		</>
 	);
 }

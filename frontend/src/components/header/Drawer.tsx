@@ -1,10 +1,9 @@
 import Drawer from '@mui/material/Drawer';
+import Stack from '@mui/material/Stack';
 import { useState } from 'react';
+import ButtonStack from './ButtonStack';
 import Hamburger from './Hamburger';
 import NavButton from './NavButton';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/icons-material/Menu';
-import Stack from '@mui/material/Stack';
 
 export default function CustyDrawer() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -32,11 +31,7 @@ export default function CustyDrawer() {
 					},
 				}}
 			>
-				<Stack spacing={1} sx={{ alignItems: 'center' }}>
-					<NavButton label="animation" id={0} />
-					<NavButton label="art" id={1} />
-					<NavButton label="about me" id={2} />
-				</Stack>
+				<ButtonStack spacing={1} sx={{ alignItems: 'center' }} />
 			</Drawer>
 		</>
 	);

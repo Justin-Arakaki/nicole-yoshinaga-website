@@ -1,18 +1,18 @@
 import { SxProps } from '@mui/material';
-import { Theme } from '@mui/material/styles';
 import ButtonBase from '@mui/material/ButtonBase';
+import { Theme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import { usePage, usePageUpdate } from '../../contexts/PageContext';
+import { Link, useLocation } from 'react-router-dom';
 
 interface ButtonProps {
 	label: string;
-	id: number;
+	link: string;
 }
 
-export default function NavButton({ label, id }: ButtonProps) {
-	const page = usePage();
-	const handleClick = usePageUpdate();
-	const isToggledOn = page === id;
+export default function NavButton({ label, link }: ButtonProps) {
+	const location = useLocation();
+	const isToggledOn = location.pathname === link;
+	console.log(location.pathname, link);
 
 	const defaultProps: SxProps<Theme> = {
 		paddingInline: '0.3rem',
@@ -36,11 +36,9 @@ export default function NavButton({ label, id }: ButtonProps) {
 
 	return (
 		<ButtonBase
+			component={Link}
+			to={link}
 			disableRipple={true}
-			onClick={() => {
-				handleClick(id);
-				console.log(page, id);
-			}}
 			sx={buttonProps}
 		>
 			<Typography variant="button">{label}</Typography>
