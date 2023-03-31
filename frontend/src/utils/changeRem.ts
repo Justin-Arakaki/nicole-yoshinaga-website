@@ -4,5 +4,5 @@ export default function changeRem(
 ) {
 	const noRem = Number(rem.replace('rem', ''));
 	const editedVal = edit(noRem);
-	return editedVal + 'rem';
+	return `${editedVal}rem`;
 }

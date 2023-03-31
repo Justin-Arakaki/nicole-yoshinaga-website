@@ -13,14 +13,14 @@ export default function Body() {
 		switch (page) {
 			case 0:
 				pageType = <Animation />;
+				break;
 			case 1:
 				pageType = <Art />;
+				break;
 			case 2:
 				pageType = <AboutMe />;
 		}
-		console.log('page: ', page);
 	}, [page]);
-	console.log('here');
 
 	return <Box sx={{ marginTop: 6 }}>{pageType}</Box>;
 }

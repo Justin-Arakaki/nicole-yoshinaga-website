@@ -1,9 +1,7 @@
 import Drawer from '@mui/material/Drawer';
-import Stack from '@mui/material/Stack';
 import { useState } from 'react';
 import ButtonStack from './ButtonStack';
 import Hamburger from './Hamburger';
-import NavButton from './NavButton';
 
 export default function CustyDrawer() {
 	const [isOpen, setIsOpen] = useState(false);

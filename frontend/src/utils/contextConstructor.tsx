@@ -25,7 +25,7 @@ export function createUseContext<T>(
 
 export function createUseContextUpdate<T>(MyContextUpdate: Context<T>) {
 	const name = Object.keys(MyContextUpdate)[3];
-	return (): any => {
+	return (): unknown => {
 		const context = useContext(MyContextUpdate);
 		if (!context) throw new Error(`${name} is null`);
 		return context;
