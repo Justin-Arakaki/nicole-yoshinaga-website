@@ -10,10 +10,7 @@ module.exports = {
 	overrides: [
 		{
 			files: ['*.ts', '*.tsx'],
-			extends: [
-				'plugin:@typescript-eslint/recommended',
-				'plugin:@typescript-eslint/recommended-requiring-type-checking',
-			],
+			extends: ['plugin:@typescript-eslint/recommended'],
 
 			parserOptions: {
 				project: ['./tsconfig.json'],
@@ -25,6 +22,7 @@ module.exports = {
 		'@typescript-eslint/no-shadow': ['error'],
 		'no-use-before-define': 'off',
 		'@typescript-eslint/no-use-before-define': ['error'],
+		'@typescript-eslint/restrict-template-expressions': 'off',
 		complexity: ['error', 10],
 		'no-await-in-loop': 'warn',
 		'no-eval': 'error',
