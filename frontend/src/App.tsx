@@ -25,6 +25,5 @@ function App() {
 		</WindowProvider>
 	);
 }
-// test
 
 export default App;
