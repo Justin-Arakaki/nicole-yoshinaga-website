@@ -11,7 +11,7 @@ export function WindowProvider({ children }: Children) {
 
 	useEffect(() => {
 		const handleResizeWindow = () => setWidth(window.innerWidth);
-		window.addEventListener('resize', debounce(handleResizeWindow, 300));
+		window.addEventListener('resize', debounce(handleResizeWindow, 200));
 		return () => {
 			window.removeEventListener('resize', handleResizeWindow);
 		};

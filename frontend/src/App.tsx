@@ -9,7 +9,6 @@ import Art from './pages/Art';
 import AboutMe from './pages/AboutMe';
 
 function App() {
-	console.log('test');
 	return (
 		<WindowProvider>
 			<PageProvider>

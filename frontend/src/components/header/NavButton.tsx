@@ -12,7 +12,6 @@ interface ButtonProps {
 export default function NavButton({ label, link }: ButtonProps) {
 	const location = useLocation();
 	const isToggledOn = location.pathname === link;
-	console.log(location.pathname, link);
 
 	const defaultProps: SxProps<Theme> = {
 		paddingInline: '0.3rem',

@@ -26,7 +26,14 @@ export default function Header() {
 					</Toolbar>
 				</AppBar>
 			</ElevationScroll>
-			<Box sx={{ marginTop: '4rem' }}></Box>
+			<Box
+				sx={{
+					marginTop: '6rem',
+					[theme.breakpoints.down('sm')]: {
+						marginTop: '4rem',
+					},
+				}}
+			></Box>
 		</>
 	);
 }
