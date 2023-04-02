@@ -14,6 +14,7 @@ export default function Animation() {
 			</Typography>
 			<Spacer size="small" />
 			<Insta />
+			<Spacer size="large" />
 		</BodyContainer>
 	);
 }
