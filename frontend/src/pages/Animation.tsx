@@ -9,12 +9,9 @@ export default function Animation() {
 		<BodyContainer>
 			<Reel />
 			<Spacer size="large" />
-			<Typography variant="h4" color="palette.text.primary">
-				instagram
-			</Typography>
+			<Typography variant="h4">instagram</Typography>
 			<Spacer size="small" />
 			<Insta />
-			<Spacer size="large" />
 		</BodyContainer>
 	);
 }

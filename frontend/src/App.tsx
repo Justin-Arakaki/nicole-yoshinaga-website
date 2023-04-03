@@ -4,6 +4,7 @@ import Header from './components/header/Header';
 import Animation from './pages/Animation';
 import Art from './pages/Art';
 import AboutMe from './pages/AboutMe';
+import Footer from './components/footer/Footer';
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 				<Route path="/art" element={<Art />} />
 				<Route path="/aboutme" element={<AboutMe />} />
 			</Routes>
+			<Footer />
 		</MasterProvider>
 	);
 }
