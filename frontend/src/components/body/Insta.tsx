@@ -2,7 +2,7 @@ export default function Insta() {
 	return (
 		<>
 			<iframe
-				src="//lightwidget.com/widgets/19913c5bb1515f43a196de6cf76def23.html"
+				src="//lightwidget.com/widgets/984f8e52868d5c1ca1409eece4e52990.html"
 				allowTransparency={true}
 				className="lightwidget-widget"
 				style={{

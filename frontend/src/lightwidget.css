@@ -1,0 +1,20 @@
+/* Copy and paste in Advanced > Custom CSS at https://lightwidget.com/ */
+
+.lightwidget__posts {
+	gap: 20px;
+}
+.lightwidget__tile {
+	flex-basis: calc(
+		100% / var(--lightwidget-columns) - (40px / var(--lightwidget-columns))
+	) !important;
+}
+@media only screen and (max-width: 650px) {
+	.lightwidget__posts {
+		gap: 10px;
+	}
+	.lightwidget__tile {
+		flex-basis: calc(
+			100% / var(--lightwidget-columns) - (20px / var(--lightwidget-columns))
+		) !important;
+	}
+}
