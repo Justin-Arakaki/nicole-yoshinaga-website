@@ -21,9 +21,8 @@ export default function Project({ src, title, company, role }: Props) {
 			</Box>
 			<Box flexBasis="75%">
 				<Typography
-					variant="body1"
+					variant="h5"
 					display="inline"
-					fontWeight={400}
 					sx={{ textDecoration: 'underline' }}
 				>
 					{title}

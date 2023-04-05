@@ -17,6 +17,7 @@ export default function Hello({ sx }: Props) {
 				display="flex"
 				flexWrap="wrap"
 				width="100%"
+				gap="1rem"
 				sx={{
 					[theme.breakpoints.down('sm')]: {
 						justifyContent: 'center',

@@ -45,7 +45,7 @@ export default function Projects({ sx }: Props) {
 
 	return (
 		<Box width="100%" sx={sx}>
-			<Typography variant="h3" mb="2rem">
+			<Typography variant="h3" mb="1rem">
 				projects
 			</Typography>
 			{ProjectStack}

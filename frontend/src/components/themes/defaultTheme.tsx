@@ -57,6 +57,12 @@ const defaultTheme = createTheme({
 			fontWeight: 400,
 			fontSize: '1.25rem',
 		},
+		// Accolade Headers
+		h5: {
+			fontWeight: 400,
+			fontSize: '1.2rem',
+			lineHeight: 1.2,
+		},
 		// Everything Else
 		body1: {
 			fontWeight: 300,
@@ -90,7 +96,7 @@ defaultTheme.typography.h4[smDown] = {
 	fontSize: '1.1rem',
 };
 defaultTheme.typography.body1[smDown] = {
-	fontSize: '1.1rem',
+	fontSize: '1rem',
 };
 defaultTheme.typography.body2[smDown] = {
 	fontSize: '1rem',
