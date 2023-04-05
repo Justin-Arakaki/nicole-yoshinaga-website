@@ -14,7 +14,7 @@ export default function NavButton({ label, link }: ButtonProps) {
 	const isToggledOn = location.pathname === link;
 
 	const defaultProps: SxProps<Theme> = {
-		paddingInline: '0.3rem',
+		paddingInline: '0.2rem',
 		borderRadius: '0.5rem',
 	};
 	const toggledProps: SxProps<Theme> = {

@@ -26,6 +26,7 @@ export default function CustyDrawer() {
 						width: '50vw',
 						minWidth: '10rem',
 						boxSizing: 'border-box',
+						backgroundColor: 'white',
 					},
 				}}
 			>

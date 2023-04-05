@@ -29,10 +29,11 @@ const defaultTheme = createTheme({
 	typography: {
 		fontFamily: 'montserrat',
 		button: {
+			fontFamily: 'quicksand',
 			fontWeight: 400,
 			fontSize: '1.2rem',
 			textTransform: 'none',
-			lineHeight: 1.3,
+			lineHeight: 1.1,
 		},
 		// Name
 		h1: {
@@ -71,9 +72,9 @@ const defaultTheme = createTheme({
 const smDown = defaultTheme.breakpoints.down('sm');
 
 // Responsive Fonts
-defaultTheme.typography.button[smDown] = {
-	fontSize: '1rem',
-};
+// defaultTheme.typography.button[smDown] = {
+// 	fontSize: '1rem',
+// };
 defaultTheme.typography.h1[smDown] = {
 	fontSize: '1.8rem',
 };

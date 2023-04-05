@@ -5,7 +5,7 @@ export default function Reel() {
 	const theme = useTheme();
 	const windowWidth = useWindow();
 	const borderRadius =
-		windowWidth < theme.breakpoints.values.sm ? '1rem' : '2rem';
+		windowWidth < theme.breakpoints.values.sm ? '0.75rem' : '1.25rem';
 
 	return (
 		<iframe
