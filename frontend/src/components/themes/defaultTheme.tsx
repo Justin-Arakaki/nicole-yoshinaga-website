@@ -60,7 +60,8 @@ const defaultTheme = createTheme({
 		// Everything Else
 		body1: {
 			fontWeight: 300,
-			fontSize: '1.25rem',
+			fontSize: '1.2rem',
+			lineHeight: 1.2,
 		},
 		// About Me Text
 		body2: {
