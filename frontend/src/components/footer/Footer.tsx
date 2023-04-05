@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faLinkedinIn,
@@ -7,44 +6,53 @@ import {
 	faVimeoV,
 } from '@fortawesome/free-brands-svg-icons';
 import SocialsButton from '../body/SocialsButton';
+import { useTheme } from '@mui/material/styles';
 
 export default function Footer() {
+	const theme = useTheme();
 	return (
 		<Box
 			sx={{
 				display: 'flex',
+				justifyContent: 'space-between',
 				backgroundColor: 'background.paper',
+				marginTop: '8rem',
 				padding: '1.5rem',
 				borderRadius: '0.75rem 0.75rem 0 0',
 			}}
 		>
 			<Box>
 				<SocialsButton
-					color="secondary"
-					aria-label="instagram"
+					aria-label="linkedin"
 					href="https://www.instagram.com/justinianpogo/"
 				>
 					<FontAwesomeIcon icon={faLinkedinIn} size="xs" />
 				</SocialsButton>
-				<IconButton
-					color="secondary"
+				<SocialsButton
 					aria-label="instagram"
 					href="https://www.instagram.com/justinianpogo/"
-					disableRipple
-					sx={{ padding: 0.5 }}
 				>
 					<FontAwesomeIcon icon={faInstagram} size="xs" />
-				</IconButton>
-				<IconButton
-					color="secondary"
-					aria-label="instagram"
+				</SocialsButton>
+				<SocialsButton
+					aria-label="vimeo"
 					href="https://www.instagram.com/justinianpogo/"
-					disableRipple
-					sx={{ padding: 0.5 }}
 				>
 					<FontAwesomeIcon icon={faVimeoV} size="xs" />
-				</IconButton>
+				</SocialsButton>
 			</Box>
+			<a
+				href="mailto:nicole.yoshinaga@gmail.com"
+				style={{
+					fontFamily: theme.typography.button.fontFamily,
+					fontSize: '1rem',
+					lineHeight: 1.5,
+					color: theme.palette.text.primary,
+					textDecoration: 'none',
+				}}
+			>
+				nicole.yoshinaga@gmail.com
+			</a>
 		</Box>
 	);
 }
