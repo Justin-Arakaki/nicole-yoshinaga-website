@@ -12,7 +12,7 @@ export default function Header() {
 	const windowWidth = useWindow();
 	const theme = useTheme();
 	let navigationType = <NavBar />;
-	if (windowWidth < theme.breakpoints.values.sm) {
+	if (windowWidth < 650) {
 		navigationType = <CustyDrawer />;
 	}
 

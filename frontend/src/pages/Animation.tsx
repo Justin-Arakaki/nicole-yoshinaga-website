@@ -1,8 +1,8 @@
-import BodyContainer from '../components/body/BodyContainer';
-import Insta from '../components/body/Insta';
-import Reel from '../components/body/Reel';
+import Insta from '../components/content/Insta';
+import Reel from '../components/content/Reel';
+import BodyContainer from '../components/ui/BodyContainer';
+import Spacer from '../components/ui/Spacer';
 import Typography from '@mui/material/Typography';
-import Spacer from '../components/body/Spacer';
 
 export default function Animation() {
 	return (

@@ -5,7 +5,7 @@ import {
 	faInstagram,
 	faVimeoV,
 } from '@fortawesome/free-brands-svg-icons';
-import SocialsButton from '../body/SocialsButton';
+import SocialsButton from './SocialsButton';
 import { useTheme } from '@mui/material/styles';
 
 export default function Footer() {

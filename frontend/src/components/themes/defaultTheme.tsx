@@ -4,7 +4,7 @@ const defaultTheme = createTheme({
 	breakpoints: {
 		values: {
 			xs: 0,
-			sm: 650,
+			sm: 600,
 			md: 900,
 			lg: 1200,
 			xl: 1536,
@@ -66,6 +66,7 @@ const defaultTheme = createTheme({
 		body2: {
 			fontWeight: 300,
 			fontSize: '1rem',
+			lineHeight: 1.2,
 		},
 	},
 });
