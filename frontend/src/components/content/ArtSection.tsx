@@ -11,9 +11,9 @@ interface Props {
 
 export default function ArtSection({ title, pieces, sx }: Props) {
 	const PiecesFlex = (
-		<Box display="flex" flexWrap="wrap" gap="2rem">
-			{pieces.map(props => (
-				<Piece {...props} />
+		<Box display="flex" flexWrap="wrap" gap="1rem">
+			{pieces.map((props, index) => (
+				<Piece {...props} key={index} />
 			))}
 		</Box>
 	);

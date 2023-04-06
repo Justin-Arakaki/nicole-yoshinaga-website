@@ -10,7 +10,7 @@ export default function Piece({ src, href }: PieceProps) {
 	const theme = useTheme();
 	const windowWidth = useWindow();
 	const columns = 3;
-	const gap = '2rem';
+	const gap = '1rem';
 	const gapPerColumn = `${gap} * (${columns} - 1) / ${columns})`;
 	const isAboveBreakpoint = windowWidth > theme.breakpoints.values.sm;
 	const flexBasis = isAboveBreakpoint
