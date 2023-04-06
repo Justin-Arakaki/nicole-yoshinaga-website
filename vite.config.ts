@@ -6,7 +6,7 @@ export default defineConfig({
 	plugins: [react()],
 	root: 'frontend',
 	publicDir: 'backend/server/public',
-	base: '/',
+	base: '/nicole-yoshinaga-website/',
 	build: {
 		outDir: '../backend/server/public',
 	},
