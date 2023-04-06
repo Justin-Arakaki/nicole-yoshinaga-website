@@ -1,5 +1,5 @@
 {
-	"name": "change-me",
+	"name": "nicole-yoshinaga-website",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
@@ -49,6 +49,7 @@
 		"babel-jest": "^29.5.0",
 		"eslint": "^8.24.0",
 		"eslint-plugin-jest": "^27.2.1",
+		"gh-pages": "^5.0.0",
 		"husky": "^8.0.1",
 		"jest": "^29.5.0",
 		"jest-environment-jsdom": "^29.5.0",

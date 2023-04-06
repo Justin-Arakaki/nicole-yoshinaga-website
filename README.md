@@ -1,4 +1,5 @@
-# full-stack-template
+# nicole-yoshinaga-website
+
 Full-stack template for personal use.
 
 Technologies:
