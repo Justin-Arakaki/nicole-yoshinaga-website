@@ -30,7 +30,11 @@ export default function CustyDrawer() {
 					},
 				}}
 			>
-				<ButtonStack spacing={1} sx={{ alignItems: 'center' }} />
+				<ButtonStack
+					spacing={1}
+					handleClose={handleDrawerClose}
+					sx={{ alignItems: 'center' }}
+				/>
 			</Drawer>
 		</>
 	);

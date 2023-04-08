@@ -7,9 +7,10 @@ import { Link, useLocation } from 'react-router-dom';
 interface ButtonProps {
 	label: string;
 	link: string;
+	handleClose?: () => void;
 }
 
-export default function NavButton({ label, link }: ButtonProps) {
+export default function NavButton({ label, link, handleClose }: ButtonProps) {
 	const location = useLocation();
 	const isToggledOn = location.pathname === link;
 
@@ -39,6 +40,7 @@ export default function NavButton({ label, link }: ButtonProps) {
 			to={link}
 			disableRipple={true}
 			sx={buttonProps}
+			onClick={handleClose}
 		>
 			<Typography variant="button">{label}</Typography>
 		</ButtonBase>

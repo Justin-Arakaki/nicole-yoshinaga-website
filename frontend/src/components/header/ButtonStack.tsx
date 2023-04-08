@@ -8,14 +8,24 @@ interface Props {
 	>;
 	spacing: ResponsiveStyleValue<string | number>;
 	sx?: SxProps;
+	handleClose?: () => void;
 }
 
-export default function ButtonStack({ direction, spacing, sx }: Props) {
+export default function ButtonStack({
+	direction,
+	spacing,
+	sx,
+	handleClose,
+}: Props) {
 	return (
 		<Stack direction={direction} spacing={spacing} sx={sx}>
-			<NavButton label="animation" link="/animation" />
-			<NavButton label="art" link="/art" />
-			<NavButton label="about me" link="/aboutme" />
+			<NavButton
+				label="animation"
+				link="/animation"
+				handleClose={handleClose}
+			/>
+			<NavButton label="art" link="/art" handleClose={handleClose} />
+			<NavButton label="about me" link="/aboutme" handleClose={handleClose} />
 		</Stack>
 	);
 }
