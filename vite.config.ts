@@ -4,10 +4,5 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [react()],
-	root: 'frontend',
-	publicDir: 'backend/server/public',
 	base: '/nicole-yoshinaga-website/',
-	build: {
-		outDir: '../backend/server/public',
-	},
 });

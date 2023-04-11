@@ -35,12 +35,7 @@ module.exports = {
 			},
 		],
 	},
-	ignorePatterns: [
-		'src/**/*.test.ts',
-		'src/frontend/generated/*',
-		'vite.config.ts',
-		'.eslintrc.cjs',
-	],
+	ignorePatterns: ['src/**/*.test.ts', 'vite.config.ts', '.eslintrc.cjs'],
 	env: {
 		browser: true,
 		'jest/globals': true,
