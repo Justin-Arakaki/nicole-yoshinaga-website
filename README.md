@@ -1,13 +1,3 @@
 # nicole-yoshinaga-website
 
-Full-stack template for personal use.
-
-Technologies:
-
-- React.js
-- Node.js
-- Vite.js
-- Nodemon
-- ESLint
-- Markuplint
-- Stylelint
+Freelance art portfolio website created using React, Typescript, and Material-UI.
